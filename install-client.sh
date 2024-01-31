@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-#curl -s -L https://raw.githubusercontent.com/smokedsalmonbagel/hothost-client/main/install-client.sh | bash
+#curl -O https://raw.githubusercontent.com/smokedsalmonbagel/hothost-client/main/install-client.sh && chmod u+x install-client.sh && ./install-client.sh
 echo Installing to "$PWD"
 read -p "Server base URL:" url
 read -p "Update interval in seconds:" interval
@@ -18,8 +18,6 @@ then
     echo "supervisor not found, installing..."
     apt install -y supervisor
 fi
-mv hothost.conf /etc/supervisor/conf.d/hothost.conf
-supervisorctl reload
-service supervisor start hothostclient
-
-
+sudo mv hothost.conf /etc/supervisor/conf.d/hothost.conf
+sudo supervisorctl reload
+sudo service supervisor start hothostclient
