@@ -5,7 +5,6 @@
 
 source hhconfig.sh
 
-
 KERNEL_NAME="$(uname -s)"
 KERNEL_VERSION="$(uname -r)"
 ARCHITECTURE="$(uname -m)"
