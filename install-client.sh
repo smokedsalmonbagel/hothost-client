@@ -17,7 +17,7 @@ mv hothost_deploy.conf hothost.conf
 if ! command -v supervisorctl &> /dev/null
 then
     echo "supervisor not found, installing..."
-    sudoapt install -y supervisor
+    sudo apt install -y supervisor
 fi
 sudo mv hothost.conf /etc/supervisor/conf.d/hothost.conf
 sudo supervisorctl reload
