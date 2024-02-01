@@ -7,7 +7,7 @@ read -p "Server base URL:" url
 read -p "Update interval in seconds:" interval
 read -p "Agent secret:" agentsecret
 curl -O https://raw.githubusercontent.com/smokedsalmonbagel/hothost-client/main/getinfo.sh
-HOTHOST_SERVER_BASE=${url} HOTHOST_MONITOR_INTERVAL=${interval} HOTHOST_AGENT_SECRET=${agentsecret} envsubst < getinfo.sh > getinfo_deploy.sh
+HH_SERVER_BASE=${url} HH_MONITOR_INTERVAL=${interval} HH_AGENT_SECRET=${agentsecret} envsubst < getinfo.sh > getinfo_deploy.sh
 mv getinfo_deploy.sh getinfo.sh 
 chmod u+x getinfo.sh
 curl -O https://raw.githubusercontent.com/smokedsalmonbagel/hothost-client/main/hothost.conf
