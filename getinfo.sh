@@ -3,7 +3,7 @@
 # -------------------------------------------------------------------------------------------------
 # detect the kernel
 
-source hhconfig
+source hhconfig.sh
 HOTHOST_SERVER_BASE=${HH_SERVER_BASE}
 HOTHOST_MONITOR_INTERVAL=${HH_MONITOR_INTERVAL}
 HOTHOST_AGENT_SECRET=${HH_AGENT_SECRET}
