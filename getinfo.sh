@@ -3,9 +3,9 @@
 # -------------------------------------------------------------------------------------------------
 # detect the kernel
 
-HOTHOST_SERVER_BASE=${HH_SERVER_BASE}
-HOTHOST_MONITOR_INTERVAL=${HH_MONITOR_INTERVAL}
-HOTHOST_AGENT_SECRET=${HH_AGENT_SECRET}
+export HOTHOST_SERVER_BASE=${HH_SERVER_BASE}
+export HOTHOST_MONITOR_INTERVAL=${HH_MONITOR_INTERVAL}
+export HOTHOST_AGENT_SECRET=${HH_AGENT_SECRET}
 
 KERNEL_NAME="$(uname -s)"
 KERNEL_VERSION="$(uname -r)"
