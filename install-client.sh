@@ -20,5 +20,6 @@ then
     sudo apt install -y supervisor
 fi
 sudo mv hothost.conf /etc/supervisor/conf.d/hothost.conf
-sudo supervisorctl reload
+sudo supervisorctl reread
+sudo supervisorctl update
 sudo service supervisor start hothostclient
