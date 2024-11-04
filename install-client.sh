@@ -19,6 +19,11 @@ then
     echo "supervisor not found, installing..."
     sudo apt install -y supervisor
 fi
+if ! command -v ts &> /dev/null
+then
+    echo "moreutils not found, installing..."
+    sudo apt install -y moreutils
+fi
 sudo mv hothost.conf /etc/supervisor/conf.d/hothost.conf
 sudo supervisorctl reread
 sudo supervisorctl update
